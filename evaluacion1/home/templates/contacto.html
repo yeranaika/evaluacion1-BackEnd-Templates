@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
     <link rel="stylesheet" href="{% static '/css/style.css' %}">  <!-- Cambié 'css/estilos.css' a 'style.css' -->
+    <link rel="stylesheet" href="{% static 'css/styleContacto.css' %}?v=1.0">
 </head>
 <body>
     <header>
@@ -19,21 +20,37 @@
         </nav>
     </header>
     <section>
-        <form action="" method="POST">
-            <label for="nombre">Nombre Completo:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            <br>
-            <label for="correo">Correo Electrónico:</label>
-            <input type="email" id="correo" name="correo" required>
-            <br>
-            <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono">
-            <br>
-            <label for="comentario">Comentario:</label>
-            <textarea id="comentario" name="comentario" rows="4" required></textarea>
-            <br>
-            <button type="submit">Enviar</button>
-        </form>
+        <div class="contenedorContacto">
+            <form action="" method="POST">
+                <div class="contendorForm">
+                    <label for="nombre">Nombre Completo:</label>
+                    <br>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <br>
+                <div class="contendorForm">
+                    <label for="correo">Correo Electrónico:</label>
+                    <br>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+                <br>
+                <div class="contendorForm">
+                    <label for="telefono">Teléfono:</label>
+                    <br>
+                    <input type="tel" id="telefono" name="telefono">
+                </div>
+                <br>
+                <div class="contendorForm">
+                    <label for="comentario">Comentario:</label>
+                    <br>
+                    <textarea id="comentario" name="comentario" rows="4" required></textarea>
+                </div>
+                <br>
+                <div class="contendorForm">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
     </section>
     <footer>
         <p>&copy; 2024 Proyecto Backend. Todos los derechos reservados.</p>

@@ -1,0 +1,17 @@
+section .contenedorContacto {
+    background-color: rgb(255, 255, 255);
+    border:  5px solid black;
+    padding: 15px;
+    width: 500px;
+    height: 400px;
+    align-items: center; /* Centrar elemento */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+.contendorForm{
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Organizar elementos en columna */
+    align-items: center; /* Centrar horizontalmente los elementos */
+    margin-bottom: 10px; /* Espacio entre cada contenedor */
+    width: 100%; /* Ancho completo del contenedor */
+}
