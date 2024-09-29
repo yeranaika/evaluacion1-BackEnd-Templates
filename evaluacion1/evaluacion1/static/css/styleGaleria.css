@@ -1,0 +1,49 @@
+/* Galería de imágenes */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Crear columnas flexibles */
+    grid-gap: 15px; /* Espacio entre las imágenes */
+    padding: 20px;
+}
+
+/* Contenedor de cada artículo */
+.articulo {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px; /* Bordes redondeados para el contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra en el contenedor */
+    text-align: center;
+    overflow: hidden; /* Ocultar cualquier contenido que sobresalga del contenedor */
+}
+
+/* Estilos para las imágenes dentro de cada artículo */
+.articulo img {
+    width: 200px; /* Tamaño fijo para las imágenes */
+    height: 200px; /* Tamaño fijo para las imágenes */
+    object-fit: cover; /* Asegura que las imágenes mantengan su proporción sin distorsionarse */
+    border-radius: 10px; /* Bordes redondeados para las imágenes */
+    border: 2px solid black; /* Contorno negro para las imágenes */
+    margin-bottom: 10px; /* Espacio debajo de la imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra en las imágenes */
+    transition: transform 0.3s ease; /* Transición suave para el hover */
+}
+
+.inicioGaleria{
+    background-color: rgb(206, 206, 206);
+    padding: 10px;
+    border-radius: 10px; /* Bordes redondeados para el contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra en el contenedor */
+    text-align: center;
+}
+
+.articulo img:hover {
+    transform: scale(1.05); /* Ampliar ligeramente la imagen al pasar el ratón */
+}
+
+/* Texto de descripción */
+.articulo p {
+    color: #555; /* Color del texto */
+    font-size: 14px;
+    margin: 0;
+    padding: 10px;
+}

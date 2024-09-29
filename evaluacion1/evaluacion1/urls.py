@@ -23,7 +23,7 @@ from home import views  # La importación es correcta
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),  # Ruta para la página principal
-    path('secundaria/', views.pagina_secundaria, name='pagina_secundaria'),  # Ruta para la página secundaria
+    path('Galeria/', views.Galeria, name='Galeria'),  # Ruta para la página secundaria
     path('contacto/', views.contacto, name='contacto'),  # Ruta para la página de contacto
     path('test/', views.test_template, name='test_template'),
 

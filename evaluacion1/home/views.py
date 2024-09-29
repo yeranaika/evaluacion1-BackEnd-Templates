@@ -6,12 +6,12 @@ from django.template import TemplateDoesNotExist
 def index(request):
     return render(request, 'index.html')  # Asegúrate de que 'index.html' esté en 'evaluacion1/templates/'
 
-def pagina_secundaria(request):
+def Galeria(request):
     contenido = {
         'titulo': 'Página Secundaria',
         'descripcion': 'Esta es una página secundaria que incluye imágenes y enlaces.',
     }
-    return render(request, 'pagina_secundaria.html', contenido)  # Debe estar en 'evaluacion1/templates/'
+    return render(request, 'Galeria.html', contenido)  # Debe estar en 'evaluacion1/templates/'
 
 def contacto(request):
     return render(request, 'contacto.html')  # Debe estar en 'evaluacion1/templates/'

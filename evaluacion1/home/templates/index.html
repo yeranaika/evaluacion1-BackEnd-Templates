@@ -5,22 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
-    <link rel="stylesheet" href="{% static '/css/style.css' %}">  <!-- Cambié 'css/estilos.css' a 'style.css' -->
+    <link rel="stylesheet" href="{% static '/css/style.css' %}?v=1.47">
+    <link rel="stylesheet" href="{% static 'css/styleContacto.css' %}?v=1.5">
+    <link rel="stylesheet" href="{% static 'css/styleGaleria.css' %}?v=1.6">
 </head>
 <body>
-    <header>
-        <h1>Bienvenido al Sitio Web</h1>
+    <header class="contenedorHader">
+        <h1>TheTaTToTing</h1>
         <nav>
             <ul>
-                <li><a Class="BarraNavegacion" href="{% url 'index' %}">Inicio</a></li>
-                <li><a Class="BarraNavegacion" href="{% url 'pagina_secundaria' %}">Página Secundaria</a></li>
-                <li><a Class="BarraNavegacion" href="{% url 'contacto' %}">Contacto</a></li>
+                <li><a class="BarraNavegacion" href="{% url 'index' %}">Inicio</a></li>
+                <li><a class="BarraNavegacion" href="{% url 'Galeria' %}">Galería</a></li>
+                <li><a class="BarraNavegacion" href="{% url 'contacto' %}">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    <section>
-        <h2>Sobre el Sitio</h2>
-        <p>Este es el sitio web desarrollado como parte del proyecto de programación Backend.</p>
+    <section class="intro">
+        <h2>Bienvenido a TheTaTToTing</h2>
+        <p>Tu destino digital para explorar, inspirarte y hacer realidad tu próximo tatuaje. En este sitio web encontrarás un espacio dedicado al arte corporal, donde la creatividad y la pasión por el diseño se unen para ofrecerte una experiencia única.</p>
+        <p>Ofrecemos una amplia variedad de estilos y diseños personalizados para que puedas encontrar la obra de arte perfecta para ti. Desde tatuajes minimalistas hasta impresionantes piezas de gran tamaño, nuestro equipo de artistas expertos está aquí para guiarte y plasmar tus ideas en la piel.</p>
+        <p>En nuestra <strong>Página Secundaria</strong>, podrás explorar una selección de nuestros mejores trabajos y conocer nuestras tarifas. Si tienes alguna pregunta o deseas agendar una cita, visita nuestra sección de <strong>Contacto</strong>. ¡Te esperamos para crear juntos la obra de arte que siempre soñaste!</p>
+        
+        <div class="logo-container">
+            <img src="{% static 'images/logo_tattoting.png' %}" alt="Logo" class="logo">        </div>
+
     </section>
     <footer>
         <p>&copy; 2024 Proyecto Backend. Todos los derechos reservados.</p>

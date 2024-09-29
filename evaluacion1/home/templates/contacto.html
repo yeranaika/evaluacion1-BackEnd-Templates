@@ -5,16 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <link rel="stylesheet" href="{% static '/css/style.css' %}">  <!-- Cambié 'css/estilos.css' a 'style.css' -->
-    <link rel="stylesheet" href="{% static 'css/styleContacto.css' %}?v=1.0">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}?v=1.47">
+    <link rel="stylesheet" href="{% static 'css/styleContacto.css' %}?v=1.5">
+    <link rel="stylesheet" href="{% static 'css/styleGaleria.css' %}?v=1.6">>
+
 </head>
 <body>
-    <header>
+    <header class="contenedorHader">
         <h1>Formulario de Contacto</h1>
         <nav>
             <ul>
                 <li><a Class="BarraNavegacion"  href="{% url 'index' %}">Inicio</a></li>
-                <li><a Class="BarraNavegacion"  href="{% url 'pagina_secundaria' %}">Página Secundaria</a></li>
+                <li><a class="BarraNavegacion" href="{% url 'Galeria' %}">Galería</a></li>
                 <li><a Class="BarraNavegacion"  href="{% url 'contacto' %}">Contacto</a></li>
             </ul>
         </nav>
@@ -23,31 +25,31 @@
         <div class="contenedorContacto">
             <form action="" method="POST">
                 <div class="contendorForm">
-                    <label for="nombre">Nombre Completo:</label>
+                    <label for="nombre" class="textoForm">Nombre Completo:</label>
                     <br>
-                    <input type="text" id="nombre" name="nombre" required>
+                    <input type="text" id="nombre" name="nombre" class="contenedorINPUT" required>
                 </div>
                 <br>
                 <div class="contendorForm">
-                    <label for="correo">Correo Electrónico:</label>
+                    <label for="correo" class="textoForm">Correo Electrónico:</label>
                     <br>
-                    <input type="email" id="correo" name="correo" required>
+                    <input type="email" id="correo" name="correo" class="contenedorINPUT" required>
                 </div>
                 <br>
                 <div class="contendorForm">
-                    <label for="telefono">Teléfono:</label>
+                    <label for="telefono" class="textoForm">Teléfono:</label>
                     <br>
-                    <input type="tel" id="telefono" name="telefono">
+                    <input type="tel" id="telefono" name="telefono" class="contenedorINPUT">
                 </div>
                 <br>
                 <div class="contendorForm">
-                    <label for="comentario">Comentario:</label>
+                    <label for="comentario" class="textoForm">Comentario:</label>
                     <br>
-                    <textarea id="comentario" name="comentario" rows="4" required></textarea>
+                    <textarea id="comentario" name="comentario" rows="4" class="contenedorComeForm" required></textarea>
                 </div>
                 <br>
                 <div class="contendorForm">
-                    <button type="submit">Enviar</button>
+                    <button type="submit" class="bottonForm">Enviar</button>
                 </div>
             </form>
         </div>

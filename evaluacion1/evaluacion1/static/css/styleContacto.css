@@ -1,17 +1,88 @@
-section .contenedorContacto {
-    background-color: rgb(255, 255, 255);
-    border:  5px solid black;
-    padding: 15px;
-    width: 500px;
-    height: 400px;
-    align-items: center; /* Centrar elemento */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
+/*fonts*/
+
+/*SpicyRice-Regular*/
+@font-face {
+    font-family: 'SpicyRice';
+    src: url('../fonts/SpicyRice-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
 }
 
-.contendorForm{
+/*PlaywriteDE*/
+@font-face {
+    font-family: 'PlaywriteDE';
+    src: url('../fonts/PlaywriteDEGrund-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+
+section .contenedorContacto {
+    background-color: rgb(255, 255, 255);
+    border: 5px solid black;
+    padding: 15px;
+    width: 90%;
+    max-width: 500px;
+    min-height: 450px; /* Altura mínima para evitar que el contenedor se colapse */
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Organizar los elementos en columna */
+    justify-content: space-between; /* Distribuir espacio entre los elementos */
+    margin: 0 auto; /* Centrar el contenedor horizontalmente */
+    box-sizing: border-box; /* Incluir padding en el ancho total */
+    border-radius: 8px; /* Bordes redondeados */
+
+}
+
+.contendorForm {
     display: flex; /* Usar flexbox */
     flex-direction: column; /* Organizar elementos en columna */
     align-items: center; /* Centrar horizontalmente los elementos */
     margin-bottom: 10px; /* Espacio entre cada contenedor */
     width: 100%; /* Ancho completo del contenedor */
+}
+
+.textoForm{
+    font-family: 'SpicyRice';
+    padding: 10px;
+    text-align: center; /* Centrar texto dentro de la etiqueta */
+}
+
+.bottonForm {
+    font-family: 'PlaywriteDE';
+    width: 100%; /* Ancho completo del botón */
+    height: 40px; /* Altura del botón */
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cursor en forma de mano */
+    background-color: #c52727; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    margin-top: auto; /* Empujar el botón hacia la parte inferior */
+}
+
+/* Efecto hover en el botón */
+.bottonForm:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el cursor */
+}
+
+.contenedorINPUT{
+    max-width: 350px ;
+    max-height: 20px ;
+
+
+    width: 100%;
+    height: auto;
+    box-sizing: border-box; /* Incluir padding en el ancho total */
+} 
+
+.contenedorComeForm{
+    max-width: 350px ;
+    max-height: 90px ;
+
+    min-width: 350px;
+    min-width: 80px;
+
+    width: 100%;
+    height: 90px;
 }
