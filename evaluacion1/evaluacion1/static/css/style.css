@@ -1,3 +1,31 @@
+/*fonts*/
+
+/*SpicyRice-Regular*/
+@font-face {
+    font-family: 'SpicyRice';
+    src: url('../fonts/SpicyRice-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+/*PlaywriteDE*/
+@font-face {
+    font-family: 'PlaywriteDE';
+    src: url('../fonts/PlaywriteDEGrund-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+/*Sixtyfour*/
+@font-face {
+    font-family: 'Sixtyfour';
+    src: url('../fonts/SixtyfourConvergence-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
 body, html {
     height: 100%;
     margin: 0;
@@ -26,7 +54,7 @@ body {
     padding: 1rem;
     text-align: center;
     min-width: 600px;
-    min-height: 190px;
+    min-height: 280px;
     position: relative;
     z-index: 10;
 }
@@ -85,7 +113,7 @@ footer {
 
 h1 {
     font-family: 'SpicyRice', sans-serif;
-    font-size: 40px;
+    font-size: 60px;
     text-align: center;
     padding: 20px;
     color: white; /* El color del texto */
@@ -140,17 +168,21 @@ h1 {
 
 .intro h2 {
     margin-top: 10px; /* Margen superior reducido */
+    font-family: 'PermanentMarker';
+
 }
 
 .intro p {
     margin-bottom: 15px; /* Espacio entre párrafos */
     color: #555; /* Color del texto */
+    font-family: 'SpicyRice';
+
 }
 
 .seccion-contenedor {
-    margin-top: 200px;
+    margin-top: 300px;
     width: 100%;
-    max-width: 1200px; /* Limita el ancho máximo de la sección */
+    max-width: 1100px; /* Limita el ancho máximo de la sección */
     margin: 0 auto; /* Centra el contenedor */
     padding: 20px;
     box-sizing: border-box;

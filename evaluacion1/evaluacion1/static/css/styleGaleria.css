@@ -1,3 +1,39 @@
+/*fonts*/
+
+/*SpicyRice-Regular*/
+@font-face {
+    font-family: 'SpicyRice';
+    src: url('../fonts/SpicyRice-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+/*PlaywriteDE*/
+@font-face {
+    font-family: 'PlaywriteDE';
+    src: url('../fonts/PlaywriteDEGrund-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+/*Sixtyfour*/
+@font-face {
+    font-family: 'Sixtyfour';
+    src: url('../fonts/SixtyfourConvergence-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+/*PermanentMarker*/
+@font-face {
+    font-family: 'PermanentMarker';
+    src: url('../fonts/PermanentMarker-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
 /* Galería de imágenes */
 .galeria {
     display: grid;
@@ -30,12 +66,22 @@
 
 .inicioGaleria{
     background-color: rgb(206, 206, 206);
-    padding: 10px;
+    font-family: 'SpicyRice';
+    padding: 5px;
     border-radius: 10px; /* Bordes redondeados para el contenedor */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra en el contenedor */
     text-align: center;
 }
 
+.inicioGaleria h2{
+    font-family: 'PermanentMarker';
+    font-size: 30px;
+}
+
+.inicioGaleria p{
+    font-family: 'SpicyRice';
+    font-size: 25px;
+}
 .articulo img:hover {
     transform: scale(1.05); /* Ampliar ligeramente la imagen al pasar el ratón */
 }
@@ -43,7 +89,10 @@
 /* Texto de descripción */
 .articulo p {
     color: #555; /* Color del texto */
-    font-size: 14px;
+    font-family: 'SpicyRice';
+    font-size: 18px;
     margin: 0;
     padding: 10px;
 }
+
+

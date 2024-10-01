@@ -17,6 +17,14 @@
     font-style: normal;
     font-size: 20px;
 }
+/*Sixtyfour*/
+@font-face {
+    font-family: 'Sixtyfour';
+    src: url('../fonts/SixtyfourConvergence-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
 
 
 section .contenedorContacto {
@@ -81,7 +89,7 @@ section .contenedorContacto {
     max-height: 90px ;
 
     min-width: 350px;
-    min-width: 80px;
+    min-height: 80px;
 
     width: 100%;
     height: 90px;
