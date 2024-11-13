@@ -66,28 +66,49 @@ nav {
     align-items: center; /* Alinear verticalmente los elementos */
 }
 
+/* lista de menu header */
 nav ul {
     display: flex;
-    list-style: none;
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+    justify-content: space-between; /* Distribuir los elementos con espacio entre ellos */
     padding: 0;
-    margin: 0; /* Eliminar cualquier margen sobrante */
+    margin: 0;
+    width: 100%; /* Asegurar que ocupe todo el ancho del nav */
 }
 
 nav ul li {
-    margin-right: 1rem;
+    flex: 1 1 auto; /* Permitir que los elementos crezcan y se ajusten automáticamente */
+    margin: 5px; /* Espacio entre los elementos */
 }
 
 nav ul li a {
+    display: block; /* Asegurar que los enlaces ocupen todo el espacio del li */
+    text-align: center; /* Centrar el texto */
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 10px 5px; /* Ajustar el padding según tu preferencia */
     background-color: #000000;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
+    width: 100%; /* Ajustar el ancho */
 }
-
 nav ul li a:hover {
     background-color: #8c8b8b;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Cambiar la dirección a columna */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Espacio vertical entre los elementos */
+    }
+
+    .BarraNavegacion {
+        font-size: 14px; /* Reducir el tamaño de fuente si es necesario */
+        padding: 8px 5px; /* Reducir el padding */
+    }
 }
 
 section {
@@ -187,3 +208,5 @@ h1 {
     padding: 20px;
     box-sizing: border-box;
 }
+
+

@@ -12,13 +12,15 @@
 <body>
     <header class="contenedorHader">
         <h1>TheTaTToTing</h1>
-        <nav>
-            <ul>
-                <li><a class="BarraNavegacion" href="{% url 'index' %}">Inicio</a></li>
-                <li><a class="BarraNavegacion" href="{% url 'Galeria' %}">Galería</a></li>
-                <li><a class="BarraNavegacion" href="{% url 'contacto' %}">Contacto</a></li>
-            </ul>
-        </nav>
+    <nav>
+        <ul class="menu-list">
+            <li><a class="BarraNavegacion" href="{% url 'index' %}">Inicio</a></li>
+            <li><a class="BarraNavegacion" href="{% url 'Galeria' %}">Galería</a></li>
+            <li><a class="BarraNavegacion" href="{% url 'contacto' %}">Contacto</a></li>
+            <li><a class="BarraNavegacion" href="{% url 'lista_tatuajes' %}">Cotizaciones</a></li>
+            <li><a class="BarraNavegacion" href="{% url 'ver_carrito' %}">Ver Carrito</a></li>
+        </ul>
+    </nav>
     </header>
     <section class="intro">
         <h2>Bienvenido a TheTaTToTing</h2>
