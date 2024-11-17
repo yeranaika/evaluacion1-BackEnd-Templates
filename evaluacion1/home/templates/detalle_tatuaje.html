@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ tatuaje.nombre }}</h1>
+<p>{{ tatuaje.descripcion }}</p>
+<p>Precio: {{ tatuaje.precio }}</p>
+<img src="{{ tatuaje.imagen.url }}" alt="{{ tatuaje.nombre }}">
+{% for imagen in tatuaje.imagenes.all %}
+    <img src="{{ imagen.imagen.url }}" alt="Imagen de {{ tatuaje.nombre }}">
+{% endfor %}
+{% endblock %}
+

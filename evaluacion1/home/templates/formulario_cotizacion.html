@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="formulario-cotizacion">
+    <h2>Formulario de Cotización Personalizada</h2>
+    <p>Completa los detalles y personaliza tu tatuaje para obtener una cotización.</p>
+
+    <form method="post" action="">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="nombre">Nombre del Cliente:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <div class="form-group">
+            <label for="tamano">Tamaño del Tatuaje:</label>
+            <select id="tamano" name="tamano">
+                <option value="pequeno">Hasta 10 cm</option>
+                <option value="mediano">Hasta 20 cm</option>
+                <option value="grande">Más de 20 cm</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="color">¿Deseas el tatuaje en color o blanco y negro?</label>
+            <div>
+                <input type="radio" id="color" name="tipo" value="color" checked>
+                <label for="color">A color</label>
+            </div>
+            <div>
+                <input type="radio" id="bn" name="tipo" value="bn">
+                <label for="bn">Blanco y negro</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="observaciones">Observaciones:</label>
+            <textarea id="observaciones" name="observaciones" rows="4" placeholder="Agrega detalles o especificaciones adicionales..."></textarea>
+        </div>
+
+        <button type="submit">Enviar Cotización</button>
+    </form>
+</section>
+{% endblock %}

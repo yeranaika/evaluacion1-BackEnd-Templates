@@ -1,0 +1,32 @@
+{% load static %}
+{% load humanize %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}TheTaTToTing{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styleContacto.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styleGaleria.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styleCotizaciones.css' %}">
+</head>
+<body>
+    <header class="contenedorHader">
+        <h1>TheTaTToTing</h1>
+        <nav>
+            <ul class="menu-list">
+                <li><a href="{% url 'index' %}" class="BarraNavegacion">Inicio</a></li>
+                <li><a href="{% url 'Galeria' %}" class="BarraNavegacion">Galería</a></li>
+                <li><a href="{% url 'contacto' %}" class="BarraNavegacion">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Proyecto Backend. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
