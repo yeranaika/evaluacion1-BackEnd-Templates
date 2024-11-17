@@ -1,65 +1,41 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
-    <link rel="stylesheet" href="{% static '/css/style.css' %}?v=1.50">
-    <link rel="stylesheet" href="{% static 'css/styleContacto.css' %}?v=1.10">
-    <link rel="stylesheet" href="{% static 'css/styleGaleria.css' %}?v=1.10">
+{% extends 'base.html' %}
 
-</head>
-<body>
-    <header class="contenedorHader">
+{% block title %}Formulario de Contacto{% endblock %}
+
+{% block content %}
+<section class="contacto-section">
+    <div class="contenedorContacto">
         <h1>Formulario de Contacto</h1>
-        <nav>
-            <ul>
-                <li><a Class="BarraNavegacion"  href="{% url 'index' %}">Inicio</a></li>
-                <li><a class="BarraNavegacion" href="{% url 'Galeria' %}">Galería</a></li>
-                <li><a Class="BarraNavegacion"  href="{% url 'contacto' %}">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section>
-        <div class="contenedorContacto">
-            <form action="" method="POST">
-                <div class="contendorForm">
-                    <label for="nombre" class="textoForm">Nombre Completo:</label>
-                    <br>
-                    <input type="text" id="nombre" name="nombre" class="contenedorINPUT" required>
-                </div>
-                <br>
-                <div class="contendorForm">
-                    <label for="correo" class="textoForm">Correo Electrónico:</label>
-                    <br>
-                    <input type="email" id="correo" name="correo" class="contenedorINPUT" required>
-                </div>
-                <br>
-                <div class="contendorForm">
-                    <label for="telefono" class="textoForm">Teléfono:</label>
-                    <br>
-                    <input type="tel" id="telefono" name="telefono" class="contenedorINPUT">
-                </div>
-                <br>
-                <div class="contendorForm">
-                    <label for="comentario" class="textoForm">Comentario:</label>
-                    <br>
-                    <textarea id="comentario" name="comentario" rows="4" class="contenedorComeForm" required></textarea>
-                </div>
-                <br>
-                <div class="contendorForm">
-                    <button type="submit" class="bottonForm">Enviar</button>
-                </div>
-            </form>
-        </div>
-    </section>
-    <footer>    
-        <p>&copy; 2024 Proyecto Backend. Todos los derechos reservados.</p>
-        <p>
-            ¿Buscas más inspiración? Visita 
-            <a href="https://ar.pinterest.com/joryama78/tatuajes-originales/" target="_blank" style="color: gold; text-decoration: none;">colección de tatuajes en Pinterest</a>.
-        </p>
-    </footer>
-</body>
-</html>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="contendorForm">
+                <label for="nombre" class="textoForm">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" class="contenedorINPUT" required>
+            </div>
+            <div class="contendorForm">
+                <label for="apellido" class="textoForm">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" class="contenedorINPUT" required>
+            </div>
+            <div class="contendorForm">
+                <label for="correo" class="textoForm">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" class="contenedorINPUT" required>
+            </div>
+            <div class="contendorForm">
+                <label for="telefono" class="textoForm">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" class="contenedorINPUT">
+            </div>
+            <div class="contendorForm">
+                <label for="direccion" class="textoForm">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" class="contenedorINPUT" required>
+            </div>
+            <div class="contendorForm">
+                <label for="comentario" class="textoForm">Comentario:</label>
+                <textarea id="comentario" name="comentario" rows="4" class="contenedorComeForm"></textarea>
+            </div>
+            <div class="contendorForm">
+                <button type="submit" class="bottonForm">Enviar</button>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,33 @@
+.tablaClientes {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+    text-align: left;
+    background-color: #ffffff; /* Fondo blanco */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.tablaClientes th, .tablaClientes td {
+    border: 1px solid #ddd;
+    padding: 12px; /* Espaciado más grande para mejor legibilidad */
+}
+
+.tablaClientes th {
+    background-color: #651F0E; /* Verde más visible */
+    color: white; /* Texto blanco */
+    font-weight: bold;
+    text-align: center; /* Centrar el texto */
+}
+
+.tablaClientes tr:nth-child(even) {
+    background-color: #f2f2f2; /* Fila de color alterno */
+}
+
+.tablaClientes tr:hover {
+    background-color: #f1f1f1; /* Resaltado al pasar el cursor */
+}
+
+.tablaClientes td {
+    text-align: center; /* Centrar el texto de las celdas */
+}

@@ -10,15 +10,18 @@
     <link rel="stylesheet" href="{% static 'css/styleContacto.css' %}">
     <link rel="stylesheet" href="{% static 'css/styleGaleria.css' %}">
     <link rel="stylesheet" href="{% static 'css/styleCotizaciones.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styleAdminUsuario.css' %}">
 </head>
 <body>
     <header class="contenedorHader">
         <h1>TheTaTToTing</h1>
         <nav>
             <ul class="menu-list">
-                <li><a href="{% url 'index' %}" class="BarraNavegacion">Inicio</a></li>
-                <li><a href="{% url 'Galeria' %}" class="BarraNavegacion">Galería</a></li>
-                <li><a href="{% url 'contacto' %}" class="BarraNavegacion">Contacto</a></li>
+                <li><a class="BarraNavegacion" href="{% url 'index' %}">Inicio</a></li>
+                <li><a class="BarraNavegacion" href="{% url 'Galeria' %}">Galería</a></li>
+                <li><a class="BarraNavegacion" href="{% url 'contacto' %}">Contacto</a></li>
+                <li><a class="BarraNavegacion" href="{% url 'cotizacion' %}">Cotizaciones</a></li>
+                <li><a class="BarraNavegacion" href="{% url 'ver_carrito' %}">Ver Carrito</a></li>
             </ul>
         </nav>
     </header>

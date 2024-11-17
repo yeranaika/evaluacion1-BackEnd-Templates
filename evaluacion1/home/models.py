@@ -15,13 +15,23 @@ class Tatuaje(models.Model):
     nombre = models.CharField(max_length=100)
     descripcion = models.TextField(blank=True, null=True)
     medida = models.DecimalField(max_digits=5, decimal_places=2)
-    precio = models.DecimalField(max_digits=10, decimal_places=2)
-    imagen = models.ImageField(upload_to='tatuajes/', blank=True, null=True)
+    precio = models.IntegerField()  # Cambiar a IntegerField para precios sin decimales    imagen = models.ImageField(upload_to='tatuajes/', blank=True, null=True)
     realizado = models.BooleanField(default=True)  # Campo para marcar si el tatuaje ha sido realizado
 
     def __str__(self):
         return f"{self.nombre} - {self.medida} cm"
 
+
+#modelo tatuajes personalizxado o a pedido
+class TatuajePersonalizado(models.Model):
+    nombre = models.CharField(max_length=100)
+    tamano_max_cm = models.IntegerField()  # Tamaño en cm
+    precio_base = models.IntegerField()  # Precio base en CLP
+    costo_color = models.IntegerField()  # Costo adicional por color
+    costo_bn = models.IntegerField(default=0)  # Costo por blanco y negro, si es necesario
+
+    def __str__(self):
+        return self.nombre
 
 # Modelo de Imagen de Tatuaje (relación uno a muchos)
 class ImagenTatuaje(models.Model):

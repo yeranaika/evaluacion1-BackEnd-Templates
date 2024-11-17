@@ -25,39 +25,18 @@
     <h2>Diseños Personalizados</h2>
     <p>Selecciona y decide qué diseño adaptar a tus gustos. Dale tu toque personal según lo que requieras y las medidas que desees.</p>
 
-    <div class="lista-opciones-personalizadas">
-        <!-- Opción de tamaño pequeño -->
-        <div class="opcion-item">
-            <h3>Tamaño Pequeño (Hasta 10 cm)</h3>
-            <p>Precio base: 50,000 CLP</p>
+    <div class="lista-tatuajes">
+        {% for tatuaje in tatuajes_personalizados %}
+        <div class="tatuaje-item">
+            <h3>{{ tatuaje.nombre }} (Hasta {{ tatuaje.tamano_max_cm }} cm)</h3>
+            <p>Precio base: {{ tatuaje.precio_base|intcomma }} CLP</p>
             <form action="{% url 'formulario_cotizacion' %}" method="GET">
-                <label><input type="radio" name="color" value="color" required> A color (+10,000 CLP)</label><br>
+                <label><input type="radio" name="color" value="color" required> A color (+{{ tatuaje.costo_color|intcomma }} CLP)</label><br>
                 <label><input type="radio" name="color" value="bn"> Blanco y negro</label><br>
                 <button type="submit">Pedir cotización</button>
             </form>
         </div>
-
-        <!-- Opción de tamaño mediano -->
-        <div class="opcion-item">
-            <h3>Tamaño Mediano (Hasta 20 cm)</h3>
-            <p>Precio base: 100,000 CLP</p>
-            <form action="{% url 'formulario_cotizacion' %}" method="GET">
-                <label><input type="radio" name="color" value="color" required> A color (+20,000 CLP)</label><br>
-                <label><input type="radio" name="color" value="bn"> Blanco y negro</label><br>
-                <button type="submit">Pedir cotización</button>
-            </form>
-        </div>
-
-        <!-- Opción de tamaño grande -->
-        <div class="opcion-item">
-            <h3>Tamaño Grande (Más de 20 cm)</h3>
-            <p>Precio base: 200,000 CLP</p>
-            <form action="{% url 'formulario_cotizacion' %}" method="GET">
-                <label><input type="radio" name="color" value="color" required> A color (+30,000 CLP)</label><br>
-                <label><input type="radio" name="color" value="bn"> Blanco y negro</label><br>
-                <button type="submit">Pedir cotización</button>
-            </form>
-        </div>
+        {% endfor %}
     </div>
 </section>
 {% endblock %}

@@ -1,96 +1,85 @@
-/*fonts*/
-
-/*SpicyRice-Regular*/
+/* Definiciones de fuentes */
 @font-face {
     font-family: 'SpicyRice';
     src: url('../fonts/SpicyRice-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
 }
-
-/*PlaywriteDE*/
 @font-face {
     font-family: 'PlaywriteDE';
     src: url('../fonts/PlaywriteDEGrund-VariableFont_wght.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
 }
-/*Sixtyfour*/
 @font-face {
     font-family: 'Sixtyfour';
     src: url('../fonts/SixtyfourConvergence-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
 }
 
-
-section .contenedorContacto {
-    background-color: rgb(255, 255, 255);
-    border: 5px solid black;
-    padding: 15px;
-    width: 90%;
-    max-width: 500px;
-    min-height: 450px; /* Altura mínima para evitar que el contenedor se colapse */
-    display: flex; /* Usar flexbox */
-    flex-direction: column; /* Organizar los elementos en columna */
-    justify-content: space-between; /* Distribuir espacio entre los elementos */
-    margin: 0 auto; /* Centrar el contenedor horizontalmente */
-    box-sizing: border-box; /* Incluir padding en el ancho total */
-    border-radius: 8px; /* Bordes redondeados */
-
+/* Estilos para la sección de contacto */
+.contacto-section {
+    background-color: #1e1e1e; /* Fondo más oscuro */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px;
+    color: #b6b6b6; /* Color del texto */
 }
 
-.contendorForm {
-    display: flex; /* Usar flexbox */
-    flex-direction: column; /* Organizar elementos en columna */
-    align-items: center; /* Centrar horizontalmente los elementos */
-    margin-bottom: 10px; /* Espacio entre cada contenedor */
-    width: 100%; /* Ancho completo del contenedor */
+.contacto-section .contenedorContacto {
+    background-color: #2b2b2b;
+    border: 5px solid #c52727;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.textoForm{
+.contacto-section .contenedorContacto h1 {
     font-family: 'SpicyRice';
-    padding: 10px;
-    text-align: center; /* Centrar texto dentro de la etiqueta */
+    color: #f1c40f; /* Color del título */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem; /* Tamaño de fuente más pequeño */
 }
 
-.bottonForm {
+.contacto-section .contendorForm {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contacto-section .textoForm {
     font-family: 'PlaywriteDE';
-    width: 100%; /* Ancho completo del botón */
-    height: 40px; /* Altura del botón */
-    border-radius: 5px; /* Esquinas redondeadas */
-    cursor: pointer; /* Cursor en forma de mano */
-    background-color: #c52727; /* Color de fondo */
-    color: white; /* Color del texto */
-    border: none; /* Sin borde */
-    margin-top: auto; /* Empujar el botón hacia la parte inferior */
+    margin-bottom: 5px;
+    color: #979797; /* Color del texto de los labels */
 }
 
-/* Efecto hover en el botón */
-.bottonForm:hover {
-    background-color: #0056b3; /* Color más oscuro al pasar el cursor */
+.contacto-section .contenedorINPUT,
+.contacto-section .contenedorComeForm {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ababab;
+    border-radius: 5px;
+    background-color: #959595;
+    box-sizing: border-box;
 }
 
-.contenedorINPUT{
-    max-width: 350px ;
-    max-height: 20px ;
+.contacto-section .contenedorINPUT:focus,
+.contacto-section .contenedorComeForm:focus {
+    border-color: #c52727; /* Color al hacer foco */
+    outline: none;
+}
 
-
+.contacto-section .bottonForm {
+    font-family: 'PlaywriteDE';
     width: 100%;
-    height: auto;
-    box-sizing: border-box; /* Incluir padding en el ancho total */
-} 
+    padding: 10px;
+    background-color: #c52727;
+    color: #757575;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-.contenedorComeForm{
-    max-width: 350px ;
-    max-height: 90px ;
-
-    min-width: 350px;
-    min-height: 80px;
-
-    width: 100%;
-    height: 90px;
+.contacto-section .bottonForm:hover {
+    background-color: #b22222; /* Color más oscuro al pasar el cursor */
 }

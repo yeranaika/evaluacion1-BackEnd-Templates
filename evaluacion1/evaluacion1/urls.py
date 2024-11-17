@@ -16,6 +16,7 @@ urlpatterns = [
     path('formulario-cotizacion/', views.formulario_cotizacion, name='formulario_cotizacion'),
     path('tatuaje/<int:id>/', views.detalle_tatuaje, name='detalle_tatuaje'),
     path('carrito/', views.ver_carrito, name='ver_carrito'),  # Asegúrate de que esta línea esté presente
+    path('clientes/', views.AdminUsuario, name='AdminUsuario.html'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
