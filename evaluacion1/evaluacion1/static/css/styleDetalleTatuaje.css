@@ -1,0 +1,95 @@
+.detalle-tatuaje-container {
+    max-width: 900px; /* Ajustado para mayor espacio */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #2b2b2b; /* Fondo oscuro */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+.detalle-tatuaje-container h1 {
+    font-family: 'SpicyRice', sans-serif;
+    color: #f1c40f; /* Color dorado */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.detalle-tatuaje-container p {
+    font-family: 'PlaywriteDE', sans-serif;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.detalle-tatuaje-container img {
+    display: block;
+    width: 100%;
+    max-width: 600px; /* Ajustado para ocupar más espacio */
+    margin: 10px auto;
+    border-radius: 8px;
+}
+
+.imagenes-adicionales {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espacio entre las imágenes */
+    justify-content: center;
+}
+
+.imagenes-adicionales img {
+    max-width: 200px; /* Tamaño de las imágenes adicionales */
+    border-radius: 5px;
+}
+
+.formulario-agendar {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+}
+
+.formulario-agendar h2 {
+    font-family: 'SpicyRice', sans-serif;
+    color: #f1c40f;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.formulario-agendar label {
+    display: block;
+    width: 150px; /* Ajusta el ancho según lo necesario */
+    margin-bottom: 5px;
+    padding: 5px;
+    font-family: 'Sixtyfour', sans-serif;
+    color: #b6b6b6;
+}
+
+.formulario-agendar input,
+.formulario-agendar textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    box-sizing: border-box; /* Para asegurar que el padding se incluya en el ancho */
+}
+
+.formulario-agendar textarea {
+    min-height: 200px; /* Altura mínima ajustada */
+    max-height: 200px;
+    resize: vertical; /* Permitir al usuario cambiar el tamaño verticalmente */
+}
+
+.formulario-agendar button {
+    background-color: #c52727;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formulario-agendar button:hover {
+    background-color: #b22222;
+}

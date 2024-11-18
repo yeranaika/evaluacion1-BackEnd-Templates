@@ -1,12 +1,16 @@
 {% extends 'base.html' %}
 
-{% block title %}Formulario de Contacto{% endblock %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/styleContacto.css' %}?v=1.10">
+{% endblock %}
 
+{% block title %}Formulario de Contacto{% endblock %}
 {% block content %}
 <section class="contacto-section">
     <div class="contenedorContacto">
-        <h1>Formulario de Contacto</h1>
-        <form action="" method="POST">
+        <h1 style="color: #f1c40f;">Formulario de Contacto</h1>
+        <form action="" method="POST" style="color: #10100f;">
             {% csrf_token %}
             <div class="contendorForm">
                 <label for="nombre" class="textoForm">Nombre:</label>

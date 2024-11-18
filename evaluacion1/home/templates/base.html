@@ -11,17 +11,19 @@
     <link rel="stylesheet" href="{% static 'css/styleGaleria.css' %}">
     <link rel="stylesheet" href="{% static 'css/styleCotizaciones.css' %}">
     <link rel="stylesheet" href="{% static 'css/styleAdminUsuario.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styleDetalleTatuaje.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styleFormCotizacion.css' %}">
 </head>
 <body>
     <header class="contenedorHader">
         <h1>TheTaTToTing</h1>
         <nav>
-            <ul class="menu-list">
-                <li><a class="BarraNavegacion" href="{% url 'index' %}">Inicio</a></li>
-                <li><a class="BarraNavegacion" href="{% url 'Galeria' %}">Galería</a></li>
-                <li><a class="BarraNavegacion" href="{% url 'contacto' %}">Contacto</a></li>
-                <li><a class="BarraNavegacion" href="{% url 'cotizacion' %}">Cotizaciones</a></li>
-                <li><a class="BarraNavegacion" href="{% url 'ver_carrito' %}">Ver Carrito</a></li>
+            <ul>
+                <li><a href="{% url 'index' %}" class="{% if request.resolver_match.url_name == 'index' %}active{% endif %}">Inicio</a></li>
+                <li><a href="{% url 'Galeria' %}" class="{% if request.resolver_match.url_name == 'Galeria' %}active{% endif %}">Galería</a></li>
+                <li><a href="{% url 'contacto' %}" class="{% if request.resolver_match.url_name == 'contacto' %}active{% endif %}">Contacto</a></li>
+                <li><a href="{% url 'cotizacion' %}" class="{% if request.resolver_match.url_name == 'cotizacion' %}active{% endif %}">Cotizaciones</a></li>
+                <li><a href="{% url 'ver_carrito' %}" class="{% if request.resolver_match.url_name == 'ver_carrito' %}active{% endif %}">Ver Carrito</a></li>
             </ul>
         </nav>
     </header>

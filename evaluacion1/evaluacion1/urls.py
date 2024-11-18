@@ -17,6 +17,8 @@ urlpatterns = [
     path('tatuaje/<int:id>/', views.detalle_tatuaje, name='detalle_tatuaje'),
     path('carrito/', views.ver_carrito, name='ver_carrito'),  # Asegúrate de que esta línea esté presente
     path('clientes/', views.AdminUsuario, name='AdminUsuario.html'),
+    path('tatuaje/agendar/<int:tatuaje_id>/', views.agendar_cita, name='agendar_cita'),
+    path('crear_cliente/', views.crear_cliente, name='crear_cliente'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

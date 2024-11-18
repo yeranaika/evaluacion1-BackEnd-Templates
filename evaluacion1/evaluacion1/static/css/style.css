@@ -60,41 +60,44 @@ body {
 }
 
 
+/* Estilos para la barra de navegación */
 nav {
+    background-color: #000; /* Fondo negro */
+    padding: 10px 20px;
     display: flex;
-    justify-content: center; /* Centrar los elementos del menú */
-    align-items: center; /* Alinear verticalmente los elementos */
+    justify-content: space-between; /* Espaciado uniforme entre los elementos */
+    align-items: center;
 }
 
-/* lista de menu header */
 nav ul {
+    list-style: none; /* Eliminar puntos de la lista */
     display: flex;
-    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
-    justify-content: space-between; /* Distribuir los elementos con espacio entre ellos */
     padding: 0;
     margin: 0;
-    width: 100%; /* Asegurar que ocupe todo el ancho del nav */
 }
 
 nav ul li {
-    flex: 1 1 auto; /* Permitir que los elementos crezcan y se ajusten automáticamente */
-    margin: 5px; /* Espacio entre los elementos */
+    margin: 0 10px; /* Espaciado entre los elementos */
 }
 
 nav ul li a {
-    display: block; /* Asegurar que los enlaces ocupen todo el espacio del li */
-    text-align: center; /* Centrar el texto */
-    color: white;
+    color: #fff; /* Color del texto */
     text-decoration: none;
-    padding: 10px 5px; /* Ajustar el padding según tu preferencia */
-    background-color: #000000;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    width: 100%; /* Ajustar el ancho */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: transparent; /* Fondo transparente */
+    transition: background-color 0.3s;
 }
+
 nav ul li a:hover {
-    background-color: #8c8b8b;
+    background-color: #444; /* Fondo al pasar el ratón */
 }
+
+nav ul li a.active {
+    background-color: #f1c40f; /* Color destacado para el elemento activo */
+    color: #000; /* Texto negro para mejor visibilidad */
+}
+
 
 @media (max-width: 768px) {
     nav ul {
@@ -190,7 +193,7 @@ h1 {
 .intro h2 {
     margin-top: 10px; /* Margen superior reducido */
     font-family: 'PermanentMarker';
-
+    color: #000000;
 }
 
 .intro p {
@@ -208,5 +211,3 @@ h1 {
     padding: 20px;
     box-sizing: border-box;
 }
-
-

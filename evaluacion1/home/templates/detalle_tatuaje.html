@@ -1,12 +1,33 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>{{ tatuaje.nombre }}</h1>
-<p>{{ tatuaje.descripcion }}</p>
-<p>Precio: {{ tatuaje.precio }}</p>
-<img src="{{ tatuaje.imagen.url }}" alt="{{ tatuaje.nombre }}">
-{% for imagen in tatuaje.imagenes.all %}
-    <img src="{{ imagen.imagen.url }}" alt="Imagen de {{ tatuaje.nombre }}">
-{% endfor %}
+<div class="detalle-tatuaje-container">
+    <h1>{{ tatuaje.nombre }}</h1>
+    <p>{{ tatuaje.descripcion }}</p>
+    <p>Precio: {{ tatuaje.precio }} $ </p>
+    <img src="{{ tatuaje.imagen.url }}" alt="{{ tatuaje.nombre }}">
+    
+    <div class="imagenes-adicionales">
+        {% for imagen in tatuaje.imagenes.all %}
+            <img src="{{ imagen.imagen.url }}" alt="Imagen de {{ tatuaje.nombre }}">
+        {% endfor %}
+    </div>
+    
+    <div class="formulario-agendar">
+        <h2>Agendar una Cita</h2>
+        <form action="{% url 'agendar_cita' tatuaje.id %}" method="POST">
+            {% csrf_token %}
+            <label for="nombre_cliente">Nombre Completo:</label>
+            <input type="text" id="nombre_cliente" name="nombre_cliente" required>
+            
+            <label for="fecha_cita">Fecha de la Cita:</label>
+            <input type="datetime-local" id="fecha_cita" name="fecha_cita" required>
+            
+            <label for="comentarios">Comentarios:</label>
+            <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+            
+            <button type="submit">Solicitar Cita</button>
+        </form>
+    </div>
+</div>
 {% endblock %}
-

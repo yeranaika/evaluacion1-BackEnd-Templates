@@ -1,17 +1,24 @@
 {% extends 'base.html' %}
 {% load humanize %}
+
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/styleCotizaciones.css' %}">
+{% endblock %}
+
 {% block content %}
 <section class="seccion-contenedor">
     <!-- Sección de tatuajes disponibles -->
     <div class="inicioGaleria">
-        <h2>Tatuajes Disponibles</h2>
-        <p>Explora algunos de nuestros mejores trabajos disponibles.</p>
+        <h2 style="color: #10100f;">Tatuajes Disponibles</h2>
+        <p style="color: #3f3f3f;">Explora algunos de nuestros mejores trabajos disponibles.</p>
     </div>
     <div class="galeria">
         {% for tatuaje in tatuajes_disponibles %}
         <div class="articulo">
-            <h3 style="font-family: 'PermanentMarker'; font-size: 24px;" class="fuente-Nombre-tatto">{{ tatuaje.nombre }}</h3>
-            <p>{{ tatuaje.descripcion }}</p>
+            <h3 style="font-family: 'PermanentMarker'; font-size: 24px; color: #10100f;" class="fuente-Nombre-tatto">{{ tatuaje.nombre }}</h3>
+            <p >{{ tatuaje.descripcion }}</p>
         
             <!-- Mostrar la imagen principal -->
             {% if tatuaje.imagen %}
@@ -30,13 +37,13 @@
     
     <!-- Sección de tatuajes realizados -->
     <div class="inicioGaleria">
-        <h2>Tatuajes Realizados</h2>
-        <p>Una muestra de algunos de los tatuajes que hemos realizado.</p>
-    </div>
+        <h2 style="color: #10100f;">Tatuajes Realizados</h2>
+        <p style="color: #3f3f3f;">Una muestra de algunos de los tatuajes que hemos realizado.</p>
+    </div> 
     <div class="galeria">
         {% for tatuaje in tatuajes_realizados %}
         <div class="articulo">
-            <h3 style="font-family: 'PermanentMarker'; font-size: 24px;" class="fuente-Nombre-tatto">{{ tatuaje.nombre }}</h3>
+            <h3 style="font-family: 'PermanentMarker'; font-size: 24px; color: #10100f;" class="fuente-Nombre-tatto">{{ tatuaje.nombre }}</h3>
             <p>{{ tatuaje.descripcion }}</p>
         
             <!-- Mostrar la imagen principal -->

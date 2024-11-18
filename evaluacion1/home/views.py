@@ -1,8 +1,9 @@
 from django.shortcuts import render , redirect
 from django.template import TemplateDoesNotExist
-from .models import Tatuaje , CotizacionPersonalizada, TatuajePersonalizado, User, Cliente  # Asegúrate de importar el modelo Tatuaje si es necesario
+from .models import Tatuaje , CotizacionPersonalizada, TatuajePersonalizado, User, Cliente, Cita  # Asegúrate de importar el modelo Tatuaje si es necesario
 
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404 
+from django.contrib import messages
 
 def index(request):
     return render(request, 'index.html')
@@ -14,7 +15,6 @@ def galeria(request):
         'tatuajes_disponibles': tatuajes_disponibles,
         'tatuajes_realizados': tatuajes_realizados
     })
-
 
 def contacto(request):
     if request.method == 'POST':
@@ -100,3 +100,60 @@ def formulario_cotizacion(request):
 def AdminUsuario(request):
     clientes = Cliente.objects.all()
     return render(request, 'AdminUsuario.html', {'clientes': clientes})
+
+def agendar_cita(request, tatuaje_id):
+    tatuaje = get_object_or_404(Tatuaje, id=tatuaje_id)
+    if request.method == 'POST':
+        nombre_cliente = request.POST.get('nombre_cliente')
+        fecha_cita = request.POST.get('fecha_cita')
+        comentarios = request.POST.get('comentarios')
+
+        # Verificar si el cliente ya existe en la base de datos
+        user, created = User.objects.get_or_create(username=nombre_cliente)
+        cliente, created = Cliente.objects.get_or_create(usuario=user)
+
+        # Crear la cita
+        Cita.objects.create(
+            cliente=cliente,
+            tatuaje=tatuaje,
+            fecha=fecha_cita,
+            estado='pendiente'
+        )
+
+        return redirect('index')  # Redirige a la página de inicio o a la que prefieras
+
+    return render(request, 'detalle_tatuaje.html', {'tatuaje': tatuaje})
+
+def crear_cliente(request):
+    if request.method == 'POST':
+        nombre = request.POST.get('nombre')
+        apellido = request.POST.get('apellido')
+        email = request.POST.get('email')
+        telefono = request.POST.get('telefono')
+        direccion = request.POST.get('direccion')
+
+        # Crear el usuario de Django
+        if not User.objects.filter(username=email).exists():
+            user = User.objects.create_user(
+                username=email,
+                email=email,
+                first_name=nombre,
+                last_name=apellido
+            )
+            user.set_unusable_password()  # Puedes configurar una contraseña si es necesario
+            user.save()
+
+            # Crear el cliente asociado
+            cliente = Cliente.objects.create(
+                usuario=user,
+                telefono=telefono,
+                direccion=direccion
+            )
+            messages.success(request, 'Cliente creado exitosamente.')
+            return redirect('admin_usuario')  # Redirigir a la página de administración de clientes
+        else:
+            messages.error(request, 'El cliente ya existe.')
+
+    return render(request, 'crear_cliente.html')
+
+

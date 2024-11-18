@@ -1,26 +1,28 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
 <div class="contenedorClientes">
-    <h1>Lista de Clientes Registrados</h1>
+    <h1 style="color: #f1c40f;">Lista de Clientes Registrados</h1>
     <table class="tablaClientes">
         <thead>
             <tr>
-                <th>Nombre Completo</th>
-                <th>Correo Electrónico</th>
-                <th>Teléfono</th>
-                <th>Dirección</th>
-                <th>Fecha de Registro</th>
+                <th style="color: #ffffff;">Nombre Completo</th>
+                <th style="color: #ffffff;">Correo Electrónico</th>
+                <th style="color: #ffffff;">Teléfono</th>
+                <th style="color: #ffffff;">Dirección</th>
+                <th style="color: #ffffff;">Fecha de Registro</th>
             </tr>
         </thead>
         <tbody>
             {% for cliente in clientes %}
             <tr>
-                <td>{{ cliente.usuario.first_name }} {{ cliente.usuario.last_name }}</td>
-                <td>{{ cliente.usuario.email }}</td>
-                <td>{{ cliente.telefono }}</td>
-                <td>{{ cliente.direccion }}</td>
-                <td>{{ cliente.usuario.date_joined|date:"d-m-Y H:i" }}</td>
+                <td style="color: #10100f;">{{ cliente.usuario.first_name }} {{ cliente.usuario.last_name }}</td>
+                <td style="color: #10100f;"> {{ cliente.usuario.email }}</td>
+                <td style="color: #10100f;">{{ cliente.telefono }}</td>
+                <td style="color: #10100f;">{{ cliente.direccion }}</td>
+                <td style="color: #10100f;">{{ cliente.usuario.date_joined|date:"d-m-Y H:i" }}</td>
             </tr>
             {% empty %}
             <tr>
